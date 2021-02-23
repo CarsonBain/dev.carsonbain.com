@@ -1,0 +1,69 @@
+<template>
+  <div class="max-w-prose">
+    <h1 class="text-4xl font-extrabold">Blog</h1>
+    <div class="mt-12">
+      <ul class="flex flex-col space-y-10">
+        <li
+          v-for="article of articles"
+          :key="article.slug"
+          class="dark:bg-gray-900 bg-gray-50 p-6 rounded-lg"
+        >
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <div>
+              <div
+                class="text-xs text-gray-700 dark:text-gray-200 uppercase tracking-wide"
+              >
+                {{ formatDate(article.createdAt) }}
+              </div>
+              <h2 class="text-xl font-bold mt-2">{{ article.title }}</h2>
+              <p
+                v-if="article.description"
+                class="mt-2 leading-7 text-gray-700 dark:text-gray-100"
+              >
+                {{ article.description }}
+              </p>
+              <div
+                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-600 dark:text-gray-300 flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'slug', 'createdAt'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+
+    return {
+      articles,
+    }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+  },
+}
+</script>
