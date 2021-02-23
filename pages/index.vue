@@ -2,8 +2,7 @@
   <div class="text-xl md:text-2xl flex flex-wrap justify-between">
     <div class="md:w-1/2 text-gray-700 dark:text-gray-200">
       <p class="leading-normal mb-5">
-        Hey, I'm Carson Bain, a front end developer from Victoria, BC, currently
-        living in Toronto, ON.
+        Front end developer from Victoria, BC, currently living in Toronto, ON.
       </p>
       <p class="leading-normal mb-5">
         Right now, I'm working at
