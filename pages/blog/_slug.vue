@@ -43,8 +43,6 @@
 </template>
 
 <script>
-import getSiteMeta from '../../utils/getSiteMeta'
-
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -55,7 +53,46 @@ export default {
     return {
       title: this.article.title,
       meta: [
-        ...this.meta,
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.article.description,
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://dev.carsonbain.com/blog/${this.$route.params.slug}`,
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: `https://dev.carsonbain.com/blog/${this.$route.params.slug}`,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.description,
+        },
         {
           property: 'article:published_time',
           content: this.article.createdAt,
@@ -64,31 +101,10 @@ export default {
           property: 'article:modified_time',
           content: this.article.updatedAt,
         },
-        {
-          property: 'article:tag',
-          content: this.article.tags ? this.article.tags.toString() : '',
-        },
         { name: 'twitter:label1', content: 'Written by' },
         { name: 'twitter:data1', content: 'Carson Bain' },
-        { name: 'twitter:label2', content: 'Filed under' },
-        {
-          name: 'twitter:data2',
-          content: this.article.tags ? this.article.tags.toString() : '',
-        },
       ],
     }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'article',
-        title: this.article.title,
-        description: this.article.description,
-        url: `${this.$config.baseUrl}/articles/${this.$route.params.slug}`,
-        mainImage: this.article.image,
-      }
-      return getSiteMeta(metaData)
-    },
   },
 }
 </script>
