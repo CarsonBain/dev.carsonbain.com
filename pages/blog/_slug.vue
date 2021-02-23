@@ -56,16 +56,16 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'IS IT BECAUSE ITS DYNAMIC',
+          content: this.article.description,
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: this.article.title,
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: this.article.description,
         },
         {
