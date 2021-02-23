@@ -35,10 +35,10 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/home-image.jpg',
+        content: '/open-graph.jpg',
       },
-      { property: 'og:image:width', content: '740' },
-      { property: 'og:image:height', content: '300' },
+      { property: 'og:image:width', content: '1000' },
+      { property: 'og:image:height', content: '667' },
 
       { name: 'twitter:site', content: '@carsonjbain' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -60,7 +60,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/home-image.jpg',
+        content: '/open-graph.jpg',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
