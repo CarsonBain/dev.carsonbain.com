@@ -82,7 +82,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content', '@nuxtjs/robots'],
+  modules: ['@nuxt/content', '@nuxtjs/robots', '@nuxtjs/google-analytics'],
+
+  googleAnalytics: {
+    id: 'UA-77321901-3',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
