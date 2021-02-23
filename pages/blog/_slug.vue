@@ -56,7 +56,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.article.description,
+          content: 'IS IT BECAUSE ITS DYNAMIC',
         },
         {
           hid: 'og:title',
