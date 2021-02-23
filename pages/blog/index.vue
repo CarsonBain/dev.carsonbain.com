@@ -59,6 +59,11 @@ export default {
       articles,
     }
   },
+  head() {
+    return {
+      title: 'Carson Bain - Blog',
+    }
+  },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
