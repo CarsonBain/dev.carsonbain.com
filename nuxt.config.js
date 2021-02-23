@@ -18,14 +18,14 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Carson Bain front end developer.',
+        content: 'Carson Bain Front End Developer.',
       },
       { property: 'og:site_name', content: 'Carson Bain' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https:/dev.carsonbain.com',
+        content: 'https://dev.carsonbain.com',
       },
       {
         hid: 'og:title',
@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Carson Bain front end developer.',
+        content: 'Carson Bain Front End Developer.',
       },
       {
         hid: 'og:image',
@@ -60,7 +60,7 @@ export default {
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: 'Carson Bain front end developer',
+        content: 'Carson Bain Front End Developer',
       },
       {
         hid: 'twitter:image',
