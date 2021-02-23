@@ -48,7 +48,7 @@
       </p>
     </div>
     <div class="md:w-1/2 md:pl-10 md:max-w-md md:mt-0 mt-10">
-      <img src="/home-image.jpg" />
+      <img alt="a mountain in the clouds during sunset" src="/home-image.jpg" />
     </div>
   </div>
 </template>
