@@ -9,6 +9,7 @@
         >
         <div class="flex space-x-4">
           <NuxtLink class="py-2 text-lg" to="/blog">Blog</NuxtLink>
+          <!-- TODO: add back dark mode -->
           <!-- <button @click="darkModeEnabled = !darkModeEnabled">
             <svg
               v-if="darkModeEnabled"
