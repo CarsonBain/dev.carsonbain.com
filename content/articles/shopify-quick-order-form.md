@@ -1,6 +1,7 @@
 ---
 title: Building a Quick Order Form with the Shopify AJAX API
 description: This post will take you through the steps to add a quick order form page on your Shopify store. The form we will be adding allows users to quickly select quantities of items they would like to purchase, and then add all selected items to cart with one click.
+createdAt: 2019-05-28
 ---
 
 # Building a Quick Order Form with the Shopify AJAX API
@@ -35,7 +36,7 @@ Let's dig into some of the Javascript from the template code to understand how t
 First, we'll set `Shopify.queue` equal to an array where we can keep track of our items that are going to be added to the cart:
 
 ```javascript
-Shopify.queue = [];
+Shopify.queue = []
 ```
 
 We want to make sure that we're updating the items in the queue everytime that the user updates the quantity of any product on the form. Lets declare an event function that will run every time the user makes a change in the quantity input box:
@@ -50,13 +51,13 @@ Inside that function, we're going to declare some variables to grab some of the 
 
 ```javascript
 //Set an initial flag for a new item
-var newItem = true;
+var newItem = true
 //Declare product property variables
-var price = $(this).attr('data-variant-price');
-var quantity = parseInt($(this).val(), 10) || 0;
-var variant = $(this).attr('data-variant');
-var totalQuantity = $('.product-total-amount');
-var totalPrice = $('.order-total-amount span');
+var price = $(this).attr('data-variant-price')
+var quantity = parseInt($(this).val(), 10) || 0
+var variant = $(this).attr('data-variant')
+var totalQuantity = $('.product-total-amount')
+var totalPrice = $('.order-total-amount span')
 ```
 
 Now that we're watching for updates in the quantity field, and we've got some variables declared, let's take a look at pushing item requests into the queue.
@@ -72,9 +73,9 @@ if (Shopify.queue.length <= 0) {
   Shopify.queue.push({
     variantId: variant,
     quantity: quantity,
-    price: price
-  });
-  updateTotals($(this), price, quantity);
+    price: price,
+  })
+  updateTotals($(this), price, quantity)
 }
 ```
 
@@ -101,9 +102,9 @@ if (newItem == true) {
   Shopify.queue.push({
     variantId: variant,
     quantity: quantity,
-    price: price
-  });
-  updateTotals($(this), price, quantity);
+    price: price,
+  })
+  updateTotals($(this), price, quantity)
 }
 ```
 
@@ -112,22 +113,19 @@ Finally, back to that `updateTotals()` function referenced above. This is what w
 `updateTotals()` takes in the element reference (that's our quantity box), the product price, and the product quantity as parameters. It first multiplies price by quantity and inserts the value into the subtotal element for the product in the corresponding table row. After that it loops through the products currently in the queue and grabs the total prices and quantities of all items. It then sets the grand total quantity and price at the bottom of the form.
 
 ```javascript
-var totalQuantityCount = 0;
-var totalPriceAmount = 0;
+var totalQuantityCount = 0
+var totalPriceAmount = 0
 function updateTotals($element, prc, qty) {
-  var $subtotal = $($element)
-    .parent()
-    .siblings('.subtotal')
-    .find('span');
-  $subtotal.html((price * quantity).toFixed(2));
+  var $subtotal = $($element).parent().siblings('.subtotal').find('span')
+  $subtotal.html((price * quantity).toFixed(2))
 
   for (var index in Shopify.queue) {
-    totalQuantityCount += Shopify.queue[index].quantity;
+    totalQuantityCount += Shopify.queue[index].quantity
     totalPriceAmount +=
-      Shopify.queue[index].quantity * Shopify.queue[index].price;
+      Shopify.queue[index].quantity * Shopify.queue[index].price
   }
-  totalQuantity.html(totalQuantityCount);
-  totalPrice.html(totalPriceAmount.toFixed(2));
+  totalQuantity.html(totalQuantityCount)
+  totalPrice.html(totalPriceAmount.toFixed(2))
 }
 ```
 
@@ -138,50 +136,50 @@ We've got our queue of products generating and listening for changes on quantity
 Let's first declare our function `Shopify.addItem` that will send the requests to the cart.
 
 ```javascript
-Shopify.addItem = function(variant, qty, callback) {
+Shopify.addItem = function (variant, qty, callback) {
   var params = {
     quantity: qty,
-    id: variant
-  };
+    id: variant,
+  }
   $.ajax({
     type: 'POST',
     url: '/cart/add.js',
     dataType: 'json',
     data: params,
-    success: function() {
+    success: function () {
       if (typeof callback === 'function') {
-        callback();
+        callback()
       }
     },
-    error: function(request) {
-      alert(request.responseJSON.description + ' Please try again');
-      $('#add-items').val('Add to cart');
-    }
-  });
-};
+    error: function (request) {
+      alert(request.responseJSON.description + ' Please try again')
+      $('#add-items').val('Add to cart')
+    },
+  })
+}
 ```
 
 `Shopify.addItem` will take in `variant`, `qty` and a callback. The callback function will be a function called `Shopify.moveAlong` and will first check if there's items in the queue. If there are items in the cart, then remove a request from `Shopify.queue` and send its `id` and `quantity` to the `Shopify.addItem` function. Once the queue is empty, all of the requests should be posted and we can redirect to the cart page:
 
 ```javascript
-Shopify.moveAlong = function($element) {
+Shopify.moveAlong = function ($element) {
   if (Shopify.queue.length) {
-    var request = Shopify.queue.shift();
-    Shopify.addItem(request.variantId, request.quantity, Shopify.moveAlong);
+    var request = Shopify.queue.shift()
+    Shopify.addItem(request.variantId, request.quantity, Shopify.moveAlong)
   } else {
-    document.location.href = '/cart';
+    document.location.href = '/cart'
   }
-};
+}
 ```
 
 Now all that's left to do is trigger these functions. We will listen to the button with the id `#add-to-cart` for a click, and once clicked, we will call the `Shopify.moveAlong` function:
 
 ```javascript
-$('#add-items').click(function(e) {
-  e.preventDefault();
-  Shopify.moveAlong($(this));
-  $(this).val('Adding items...');
-});
+$('#add-items').click(function (e) {
+  e.preventDefault()
+  Shopify.moveAlong($(this))
+  $(this).val('Adding items...')
+})
 ```
 
 ### Enjoy!

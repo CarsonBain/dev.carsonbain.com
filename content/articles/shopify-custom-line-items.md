@@ -1,6 +1,7 @@
 ---
 title: Adding line item properties for personalization to your Shopify site
 description: Let's add custom line item properties to a new product page template, as well as make the names of these new properties customizable by adding them as Theme Settings in the Shopify Admin.
+createdAt: 2019-05-28
 ---
 
 # Adding line item properties for personalization to your Shopify site
