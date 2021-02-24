@@ -44,11 +44,11 @@
           </button> -->
         </div>
       </nav>
-      <div
+      <main
         class="max-w-screen-lg mx-auto px-8 py-12 dark:bg-black dark:text-white"
       >
         <Nuxt />
-      </div>
+      </main>
     </div>
   </div>
 </template>

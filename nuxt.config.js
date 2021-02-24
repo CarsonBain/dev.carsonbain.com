@@ -67,7 +67,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~assets/css/app.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -85,6 +85,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxt/content', '@nuxtjs/robots', '@nuxtjs/google-analytics'],
 
+  // Google Analytics
   googleAnalytics: {
     id: 'UA-77321901-3',
   },
