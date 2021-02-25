@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/open-graph.jpg',
+        content: '/profile-pic.jpg',
       },
       { property: 'og:image:width', content: '1000' },
       { property: 'og:image:height', content: '667' },
@@ -60,7 +60,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/open-graph.jpg',
+        content: '/profile-pic.jpg',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

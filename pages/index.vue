@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xl md:text-2xl flex flex-wrap justify-between">
+  <div class="text-xl md:text-2xl flex flex-wrap justify-between items-center">
     <div class="md:w-1/2 text-gray-700 dark:text-gray-200">
       <p class="leading-normal mb-5">
         Front end developer from Victoria, BC, currently living in Toronto, ON.
@@ -47,8 +47,11 @@
         >.
       </p>
     </div>
-    <div class="md:w-1/2 md:pl-10 md:max-w-md md:mt-0 mt-10">
-      <img alt="a mountain in the clouds during sunset" src="/home-image.jpg" />
+    <div class="md:w-1/2 md:max-w-md">
+      <img
+        alt="black and white illustration of Carson Bain"
+        src="/profile-pic.jpg"
+      />
     </div>
   </div>
 </template>
