@@ -60,15 +60,6 @@ export default {
       darkModeEnabled: false,
     }
   },
-  mounted() {
-    // Try a hack for messed up transitions when someone goes back in the browser on iOS
-    if (/apple/i.test(navigator.vendor)) {
-      this.$el.addEventListener('touchstart', (e) => {
-        if (e.pageX > 10 && e.pageX < window.innerWidth - 10)
-          return e.preventDefault()
-      })
-    }
-  },
 }
 </script>
 
