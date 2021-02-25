@@ -80,10 +80,27 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    '@/modules/dynamicSitemapGenerator',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content', '@nuxtjs/robots', '@nuxtjs/google-analytics'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/robots',
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/sitemap',
+  ],
+
+  // Sitemap
+  sitemap: {
+    hostname: 'https://dev.carsonbain.com',
+    gzip: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+    },
+  },
 
   // Google Analytics
   googleAnalytics: {
