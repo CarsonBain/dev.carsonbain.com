@@ -1,8 +1,9 @@
-.page-enter-active,
+/* Remove for now due to bug with safari going back and forth between pages */
+/* .page-enter-active,
 .page-leave-active {
   transition: opacity 0.2s;
 }
 .page-enter,
 .page-leave-to {
   opacity: 0;
-}
+} */
