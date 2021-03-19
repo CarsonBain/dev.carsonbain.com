@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-prose">
-    <h1 class="text-4xl font-extrabold">Blog</h1>
-    <div class="mt-12">
+    <h1 class="sr-only">Blog</h1>
+    <div class="md:mt-8">
       <ul class="flex flex-col space-y-10">
         <li
           v-for="article of articles"
