@@ -22,8 +22,8 @@
               <tr v-for="(row, i) in rows" :key="i">
                 <td
                   v-for="(column, index) in columns"
-                  :key="index"
                   class="px-6 py-4 whitespace-nowrap"
+                  :key="index"
                 >
                   <slot
                     :name="`column-${column.name}`"

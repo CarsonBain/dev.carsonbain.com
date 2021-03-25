@@ -4,8 +4,6 @@ description: Let's add custom line item properties to a new product page templat
 createdAt: 2019-05-28
 ---
 
-<div class="prose">
-
 # Adding line item properties for personalization to your Shopify site
 
 For some products in your store, you may want to capture other form-like information from the customer such as custom monogram/engraving text or a choice of colour in which inventory doesn't need to be kept. These fields are called line item properties and can be used to allow customers to make choices or add information about a product.
@@ -147,5 +145,3 @@ Let's add some settings **specifically** for the `product-personalize-template.l
 ### Enjoy! 🎉
 
 _We only briefly touched on Theme Settings in this post. If you want to learn more about Theme Settings and how they are configured, the [Shopify Documentation](https://help.shopify.com/en/themes/development/theme-editor/settings-schema) is a great resource for that_
-
-</div>

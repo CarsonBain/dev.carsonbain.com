@@ -4,8 +4,6 @@ description: A 3 step strategy to help get a project's CSS back under control wi
 createdAt: 2021-02-20
 ---
 
-<div class="prose">
-
 # How to (slowly) migrate your project to Tailwind CSS
 
 Over the last 8 months or so, I've really loved writing and organizing CSS with [Tailwind CSS](https://tailwindcss.com/). I've also found that using Tailwind in a project that has rather unorganised and hard to maintain CSS can be a really good strategy to get things back under control.
@@ -74,5 +72,3 @@ Using `!important` shouldn't be seen as a disadvantage or "bad practice" — I w
 What's great about this 3 step approach above is that combined with the fact that Tailwind uses [PurgeCSS](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html), the only classes that are created are the ones that are actually used in your project. So instead of loading in every possible combination of classes your project _could_ use, it's only going to generate the classes your project is currently using. This means that we can slowly refactor, and not be worried about adding a ton of size to the final bundle that gets served to the user!
 
 Hopefully this post helps if you're feeling overwhelmed about taking on a migration / re-write like this. It doesn't have to be as daunting as it seems — take it slow!
-
-</div>
