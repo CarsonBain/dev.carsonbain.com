@@ -1,14 +1,18 @@
 <template>
   <div :class="{ dark: darkModeEnabled }" class="h-full">
-    <div class="text-gray-900 h-full bg-white dark:bg-black dark:text-white">
+    <div class="text-gray-900 h-full dark:text-white">
       <nav
         class="flex justify-between items-center max-w-screen-lg mx-auto px-8 py-6 border-b border-solid border-gray-200 dark:border-gray-600"
       >
-        <NuxtLink class="uppercase font-bold tracking-wider text-xl" to="/"
+        <NuxtLink class="uppercase font-bold tracking-wider text-2xl" to="/"
           >Carson Bain</NuxtLink
         >
         <div class="flex space-x-4">
-          <NuxtLink class="py-2 text-lg" to="/blog">Blog</NuxtLink>
+          <NuxtLink
+            class="px-3 py-1 text-lg font-semibold bg-blue-50 text-blue-900 rounded"
+            to="/blog"
+            >Blog</NuxtLink
+          >
           <!-- TODO: add back dark mode -->
           <!-- <button @click="darkModeEnabled = !darkModeEnabled">
             <svg
@@ -60,14 +64,15 @@ export default {
       darkModeEnabled: false,
     }
   },
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'bg-white dark:bg-black dark:text-white',
+      },
+      htmlAttrs: {
+        class: this.darkModeEnabled ? 'dark' : '',
+      },
+    }
+  },
 }
 </script>
-
-<style>
-html,
-body,
-#__nuxt,
-#__layout {
-  height: 100%;
-}
-</style>

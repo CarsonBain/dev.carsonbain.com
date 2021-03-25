@@ -38,5 +38,8 @@
     "postcss": "^7",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "resolutions": {
+    "**/fsevents": "2.1.0"
   }
 }

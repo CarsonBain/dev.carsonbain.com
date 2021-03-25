@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-prose">
+  <div class="max-w-prose mx-auto">
     <h1 class="sr-only">Blog</h1>
     <div class="md:mt-8">
       <ul class="flex flex-col space-y-10">
@@ -10,20 +10,18 @@
         >
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
             <div>
-              <div
-                class="text-xs text-gray-700 dark:text-gray-200 uppercase tracking-wide"
-              >
+              <div class="text-xs dark:text-gray-200 uppercase tracking-wide">
                 {{ formatDate(article.createdAt) }}
               </div>
               <h2 class="text-xl font-bold mt-2">{{ article.title }}</h2>
               <p
                 v-if="article.description"
-                class="mt-2 leading-7 text-gray-700 dark:text-gray-100"
+                class="mt-2 leading-7 dark:text-gray-100"
               >
                 {{ article.description }}
               </p>
               <div
-                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-600 dark:text-gray-300 flex items-center"
+                class="mt-4 uppercase tracking-wide text-xs font-semibold text-gray-500 dark:text-gray-300 flex items-center"
               >
                 Read more
                 <svg
@@ -51,6 +49,7 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
+      .where({ draft: { $ne: true } })
       .only(['title', 'description', 'slug', 'createdAt', 'updatedAt'])
       .sortBy('createdAt', 'desc')
       .fetch()

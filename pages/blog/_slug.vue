@@ -2,7 +2,7 @@
   <div>
     <NuxtLink
       to="/blog"
-      class="uppercase tracking-wide text-sm font-semibold text-gray-600 flex items-center mb-8"
+      class="uppercase tracking-wide text-sm font-semibold text-gray-600 flex items-center mb-8 md:mb-12"
     >
       <svg
         class="w-4 h-4 mr-1"
@@ -19,11 +19,11 @@
       Back to blog</NuxtLink
     >
     <article>
-      <nuxt-content class="prose mx-auto" :document="article" />
+      <nuxt-content class="max-w-prose mx-auto" :document="article" />
     </article>
     <NuxtLink
       to="/blog"
-      class="uppercase tracking-wide text-sm font-semibold text-gray-600 flex items-center mt-12"
+      class="uppercase tracking-wide text-sm font-semibold text-gray-600 flex items-center my-12"
     >
       <svg
         class="w-4 h-4 mr-1"

@@ -7,3 +7,10 @@
 .page-leave-to {
   opacity: 0;
 } */
+
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+}

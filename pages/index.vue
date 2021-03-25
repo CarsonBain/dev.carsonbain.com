@@ -1,6 +1,6 @@
 <template>
   <div class="text-xl md:text-2xl flex flex-wrap justify-between items-center">
-    <div class="md:w-1/2 text-gray-700 dark:text-gray-200">
+    <div class="md:w-1/2 text-gray-800 dark:text-gray-200">
       <p class="leading-normal mb-5">
         Front end developer from Victoria, BC, currently living in Toronto, ON.
       </p>
