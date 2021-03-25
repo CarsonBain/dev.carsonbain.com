@@ -19,7 +19,7 @@
       Back to blog</NuxtLink
     >
     <article>
-      <nuxt-content class="prose mx-auto" :document="article" />
+      <nuxt-content class="max-w-prose mx-auto" :document="article" />
     </article>
     <NuxtLink
       to="/blog"
