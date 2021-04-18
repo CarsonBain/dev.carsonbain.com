@@ -77,8 +77,6 @@ export default {
 - We're tracking the `@change` event on the `<input>` element, and triggering our own method `onFileChange()` whenever `@change` is fired. This will allow us to capture the file that's passed to the input, and then do something with it.
 - We have an `.hide-file-input` class on the `<input>` element and have added some styles for it in the `<styles>` block. This will allow us to customize the appearance of the file input, since as long as we have an `id` and `for` pairing between the `<label>` and `<input>`, clicking on the `<label>` will trigger the `<input>`.
 
-With this markup, you should now have a component that when you click, opens the file browser, and allows you to upload an image. If you open up the devtools and check the console, you'll also see the event emitted when you select a file. Try it below:
-
 ## Emit a custom event with the uploaded file
 
 Now that we have the basic structure in place, let's create a [custom event](https://vuejs.org/v2/guide/components-custom-events.html) that emits the uploaded file. This will allow a parent component that consumes the `FileComponent` to listen for the event, and then do something with the file.
