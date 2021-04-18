@@ -2,6 +2,7 @@
 title: Creating a reusable file input component in Vue.js
 description: Creating a reusable file input component in Vue.js
 createdAt: 2021-04-18
+draft: true
 ---
 
 <div class="prose">
