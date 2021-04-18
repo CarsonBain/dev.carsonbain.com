@@ -2,7 +2,6 @@
 title: Creating a reusable file input component in Vue.js
 description: Creating a reusable file input component in Vue.js
 createdAt: 2021-04-18
-draft: true
 ---
 
 <div class="prose">
@@ -13,14 +12,14 @@ The HTML `<input="file">` element is a special exception in Vue with regards to 
 
 ## Creating the component markup
 
-Let's set first set up the [single file component](https://vuejs.org/v2/guide/single-file-components.html) and give it some basic markdown.
+Let's set first set up the [single file component](https://vuejs.org/v2/guide/single-file-components.html) and give it some basic markdown and styles.
 
 ```vue[FileComponent.vue]
 <template>
   <div>
     <input
       id="file-input"
-      class="sr-only"
+      class="hide-file-input"
       type="file"
       accept="image/*"
       @change="onFileChange($event)"
@@ -38,6 +37,17 @@ export default {
 }
 </script>
 <style scoped>
+.hide-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 .file-label {
   color: #fff;
   background-color: #3730A3;
