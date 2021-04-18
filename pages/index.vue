@@ -59,7 +59,25 @@
       </div>
     </div>
     <div>
-      <h2 class="text-xl md:text-2xl font-bold">Recent posts</h2>
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl md:text-2xl font-bold">Recent posts</h2>
+        <NuxtLink
+          class="border-b border-solid border-gray-800 flex items-center space-x-1"
+          to="/blog"
+          ><span>See all</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 text-gray-700"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            /></svg
+        ></NuxtLink>
+      </div>
       <ul class="flex flex-col space-y-10 mt-8">
         <li
           v-for="article of articles"
