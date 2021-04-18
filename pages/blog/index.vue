@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-prose mx-auto">
+  <div class="mx-auto">
     <h1 class="sr-only">Blog</h1>
     <div class="md:mt-8">
       <ul class="flex flex-col space-y-10">
@@ -9,7 +9,7 @@
           class="pb-10 border-b border-gray-200"
         >
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-            <div>
+            <div class="max-w-prose">
               <div class="text-xs dark:text-gray-200 uppercase tracking-wide">
                 {{ formatDate(article.createdAt) }}
               </div>
