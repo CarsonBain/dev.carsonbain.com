@@ -13,8 +13,21 @@
 <script>
 export default {
   methods: {
-    onFileChange(event) {
-      console.log(event)
+    onFileChange($event) {
+      const file = $event.target.files[0]
+      const reader = new FileReader()
+      if (file) {
+        reader.readAsDataURL(file)
+        reader.onload = () => {
+          // Set a new property on the captured `file` and set it to the converted base64 image
+          file.previewBase64 = reader.result
+          // Emit the file with the new previewBase64 property on it
+          this.$emit('file-updated', file)
+        }
+        reader.onerror = (error) => {
+          console.log('Error ', error)
+        }
+      }
     },
   },
 }
@@ -33,7 +46,7 @@ export default {
 }
 .file-label {
   color: #fff;
-  background-color: #3730A3;
+  background-color: #3730a3;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
