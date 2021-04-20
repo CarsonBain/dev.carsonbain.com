@@ -51,4 +51,7 @@ export default {
   border-radius: 0.25rem;
   cursor: pointer;
 }
+input[type='file']:focus + .file-label {
+  box-shadow: 0 0 0 4px #bae6fd;
+}
 </style>

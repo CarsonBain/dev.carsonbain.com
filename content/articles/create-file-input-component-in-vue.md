@@ -64,6 +64,9 @@ export default {
   border-radius: 0.25rem;
   cursor: pointer;
 }
+input[type='file']:focus + .file-label {
+  box-shadow: 0 0 0 4px #bae6fd;
+}
 </style>
 ```
 
@@ -125,7 +128,7 @@ export default {
 
 Let's assume that we want to continue on with the idea that this input is for `image` type files only. Maybe we want to show the user a preview of their uploaded image. To do this, let's go back to our `FileComponent` and make some changes to the `onFileChange()` method.
 
-In order do display a preview of the file to the user, we'll need to convert the uploaded file to base64 using the [`FileReader`](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) class and then add the base64 preview to the `File` object we emit in the `file-updated` event.
+In order to display a preview of the file to the user, we'll need to convert the uploaded file to base64 using the [`FileReader`](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) class and then add the base64 preview to the `File` object we emit in the `file-updated` event.
 
 ```vue[FileComponent.vue]
 <script>
