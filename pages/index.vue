@@ -78,7 +78,7 @@
             /></svg
         ></NuxtLink>
       </div>
-      <ul class="flex flex-col space-y-10 mt-8">
+      <ul class="flex flex-col space-y-10 mt-6">
         <li
           v-for="article of articles"
           :key="article.slug"
@@ -128,7 +128,7 @@ export default {
       .where({ draft: { $ne: true } })
       .only(['title', 'description', 'slug', 'createdAt', 'updatedAt'])
       .sortBy('createdAt', 'desc')
-      .limit(1)
+      .limit(2)
       .fetch()
 
     return {
