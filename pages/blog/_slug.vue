@@ -134,7 +134,7 @@ export default {
 
     /* Add top padding to code blocks with filename */
     & > .filename + pre[class*='language-'] {
-      @apply pt-8;
+      @apply pt-12 md:pt-8;
     }
   }
 }
