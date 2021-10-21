@@ -7,7 +7,7 @@
       accept="image/*"
       @change="onFileChange($event)"
     />
-    <label class="file-label" for="file-input"> Upload file </label>
+    <label class="file-label" for="file-input"> Upload a file </label>
   </div>
 </template>
 <script>

@@ -128,7 +128,7 @@ export default {
       .where({ draft: { $ne: true } })
       .only(['title', 'description', 'slug', 'createdAt', 'updatedAt'])
       .sortBy('createdAt', 'desc')
-      .limit(2)
+      .limit(3)
       .fetch()
 
     return {
