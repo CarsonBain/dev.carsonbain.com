@@ -75,12 +75,8 @@ input[type='file']:focus + .file-label {
 
 **You'll see we have a few things going on here:**
 
-<!-- - We have a `<slot>` inside of the `<label>` element. This will allow us to render whatever text we want to the label allowing the component to be more flexible to different use cases. For more on slots, read the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html). -->
-
-<!-- TODO: should i mention this? should it just be simpler? Do we need to cover validation or adding accept as a prop? -->
-
 - We set the `accept` property on the `<input>` element to be `'image/*'`. This will show the user only image type file options in their finder when they try to upload a file.
-  - _Note that it is technically possible for the user to bypass this and upload other file types, so beware if you're submitting this file to a server, and make sure to add some server side validation, and/or use something like [vee validate](https://vee-validate.logaretm.com/v4/) to add some additional client side validation._
+  - _Note that it is technically possible for the user to bypass this and upload other file types, so beware if you're submitting this file to a server. Make sure to add some server side validation, and/or use something like [vee validate](https://vee-validate.logaretm.com/v4/) to add some additional client side validation._
 - We're tracking the `@change` event on the `<input>` element, and triggering our own method `onFileChange()` whenever `@change` is fired. This will allow us to capture the file that's passed to the input, and then do something with it.
 - We have an `.hide-file-input` class on the `<input>` element and have added some styles for it in the `<styles>` block. This will allow us to customize the appearance of the file input, since as long as we have an `id` and `for` pairing between the `<label>` and `<input>`, clicking on the `<label>` will trigger the `<input>`.
 
