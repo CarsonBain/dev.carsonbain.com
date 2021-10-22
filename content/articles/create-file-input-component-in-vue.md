@@ -8,7 +8,7 @@ createdAt: 2021-10-21
 
 # Creating a reusable file input component in Vue.js
 
-The HTML `<input="file">` element is a special exception in Vue with regards to using [`v-model`](https://vuejs.org/v2/guide/forms.html) in that `v-model` is actually not supported on `file` type `inputs`. This makes some sense when you think about it, as you can't really _set_ a value on a file input. If we want to make a file input in to a reusable Vue component, we have to approach it a bit differently.
+The HTML `<input type="file">` element is a special exception in Vue with regards to using [`v-model`](https://vuejs.org/v2/guide/forms.html) in that `v-model` is actually not supported on `file` type `inputs`. This makes some sense when you think about it, as you can't really _set_ a value on a file input. If we want to make a file input in to a reusable Vue component, we have to approach it a bit differently.
 
 By the end of this post, you'll have a reusable component that will let the user upload an image file and display a preview.
 
