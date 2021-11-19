@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col space-y-10">
-    <div class="text-xl flex flex-wrap justify-between items-center">
+    <div class="text-lg md:text-xl flex flex-wrap justify-between items-center">
       <div class="text-gray-800 dark:text-gray-200 max-w-prose">
         <h1 class="leading-normal mb-5">
           Front end developer from Victoria, BC, currently living in Toronto,
@@ -54,7 +54,7 @@
       <div class="flex items-center justify-between">
         <h2 class="text-xl md:text-2xl font-bold">Recent posts</h2>
         <NuxtLink
-          class="text-lg border-b border-solid border-gray-800 dark:border-gray-100 flex items-center space-x-1"
+          class="border-b border-solid border-gray-800 dark:border-gray-100 flex items-center space-x-1"
           to="/blog"
           ><span>See all</span
           ><svg
