@@ -124,7 +124,6 @@ export default {
       @apply z-10;
       @apply font-mono;
       @apply text-xs;
-      @apply p-1;
       @apply tracking-tight;
       @apply leading-none;
       @apply mr-4;
