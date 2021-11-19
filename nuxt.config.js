@@ -32,16 +32,10 @@ export default {
         property: 'og:description',
         content: 'Carson Bain Front End Developer.',
       },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: '/profile-pic.jpg',
-      },
       { property: 'og:image:width', content: '1000' },
       { property: 'og:image:height', content: '667' },
 
       { name: 'twitter:site', content: '@carsonjbain' },
-      { name: 'twitter:card', content: 'summary_large_image' },
       {
         hid: 'twitter:url',
         name: 'twitter:url',
@@ -56,11 +50,6 @@ export default {
         hid: 'twitter:description',
         name: 'twitter:description',
         content: 'Carson Bain Front End Developer',
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: '/profile-pic.jpg',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
