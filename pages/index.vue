@@ -81,7 +81,9 @@
               <div class="text-sm dark:text-gray-200 uppercase tracking-wide">
                 {{ formatDate(article.createdAt) }}
               </div>
-              <h2 class="text-xl font-bold mt-2">{{ article.title }}</h2>
+              <h2 class="text-lg md:text-xl font-bold mt-2">
+                {{ article.title }}
+              </h2>
               <p
                 v-if="article.description"
                 class="mt-2 leading-7 dark:text-gray-100"
