@@ -52,7 +52,7 @@
     </div>
     <div>
       <div class="flex items-center justify-between">
-        <h2 class="text-xl md:text-2xl font-bold">Recent posts</h2>
+        <h2 class="text-lg md:text-xl font-bold">Recent posts</h2>
         <NuxtLink
           class="border-b border-solid border-gray-800 dark:border-gray-100 flex items-center space-x-1"
           to="/blog"
