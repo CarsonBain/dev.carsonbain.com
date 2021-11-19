@@ -3,8 +3,8 @@
     <div class="text-lg md:text-xl flex flex-wrap justify-between items-center">
       <div class="text-gray-800 dark:text-gray-200 max-w-prose">
         <h1 class="leading-normal mb-5">
-          Front end developer from Victoria, BC, currently living in Toronto,
-          ON.
+          Front end developer from Victoria, BC, currently living in Toronto, ON
+          📍.
         </h1>
         <p class="leading-normal mb-5">
           Right now, I'm working at
