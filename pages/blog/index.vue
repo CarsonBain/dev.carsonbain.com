@@ -10,7 +10,7 @@
         >
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
             <div class="max-w-prose">
-              <div class="text-sm dark:text-gray-200 uppercase tracking-wide">
+              <div class="text-sm dark:text-gray-200">
                 {{ formatDate(article.createdAt) }}
               </div>
               <h2 class="text-lg md:text-xl font-bold mt-2">
@@ -23,7 +23,7 @@
                 {{ article.description }}
               </p>
               <div
-                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-500 dark:text-gray-100 flex items-center"
+                class="mt-4 text-sm text-gray-900 dark:text-gray-100 inline-flex items-center border-b border-gray-900 dark:border-gray-100"
               >
                 Read more
                 <svg
