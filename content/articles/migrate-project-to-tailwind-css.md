@@ -4,7 +4,7 @@ description: A 3 step strategy to help get a project's CSS back under control wi
 createdAt: 2021-02-20
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # How to (slowly) migrate your project to Tailwind CSS
 

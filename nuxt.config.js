@@ -113,7 +113,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-coldark-cold.css',
+        theme: 'prism-themes/themes/prism-nord.css',
       },
     },
   },

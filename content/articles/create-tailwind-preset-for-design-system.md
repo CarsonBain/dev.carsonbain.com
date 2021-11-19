@@ -4,7 +4,7 @@ description: Sometimes you will have multiple projects that need to share the sa
 createdAt: 2021-10-16
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # Use Tailwind Presets to share a design system between projects
 

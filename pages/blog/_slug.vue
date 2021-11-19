@@ -2,7 +2,7 @@
   <div>
     <NuxtLink
       to="/blog"
-      class="uppercase tracking-wide text-sm font-semibold text-gray-600 flex items-center mb-8 md:mb-12"
+      class="uppercase tracking-wide text-sm font-semibold text-gray-600 dark:text-gray-50 flex items-center mb-8 md:mb-12"
     >
       <svg
         class="w-4 h-4 mr-1"
@@ -119,13 +119,12 @@ export default {
       @apply absolute;
       @apply right-0;
       @apply top-0;
-      @apply text-blue-600;
+      @apply text-gray-200;
+      @apply border-b;
       @apply z-10;
       @apply font-mono;
       @apply text-xs;
-      @apply bg-blue-200;
       @apply p-1;
-      @apply rounded;
       @apply tracking-tight;
       @apply leading-none;
       @apply mr-4;

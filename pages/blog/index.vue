@@ -6,7 +6,7 @@
         <li
           v-for="article of articles"
           :key="article.slug"
-          class="pb-10 border-b border-gray-200"
+          class="pb-10 border-b border-gray-200 dark:border-gray-600"
         >
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
             <div class="max-w-prose">
@@ -21,7 +21,7 @@
                 {{ article.description }}
               </p>
               <div
-                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-500 dark:text-gray-300 flex items-center"
+                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-500 dark:text-gray-100 flex items-center"
               >
                 Read more
                 <svg
