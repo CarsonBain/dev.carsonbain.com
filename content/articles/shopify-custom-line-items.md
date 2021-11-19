@@ -4,7 +4,7 @@ description: Let's add custom line item properties to a new product page templat
 createdAt: 2019-05-28
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # Adding line item properties for personalization to your Shopify site
 

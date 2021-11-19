@@ -4,7 +4,7 @@ description: This post will take you through the steps to add a quick order form
 createdAt: 2019-05-28
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # Building a Quick Order Form with the Shopify AJAX API
 

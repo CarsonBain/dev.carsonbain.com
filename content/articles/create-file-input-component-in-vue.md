@@ -4,7 +4,7 @@ description: Sometimes it's nice to build components from scratch and not have t
 createdAt: 2021-10-21
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # Creating a reusable file input component in Vue.js
 
@@ -14,7 +14,7 @@ By the end of this post, you'll have a reusable component that will let the user
 
 It should look and function like the example below:
 
-<div class="bg-gray-100 flex items-center justify-center py-10 rounded-lg">
+<div class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center py-10 rounded-lg">
 
 <FilePreviewExample></FilePreviewExample>
 

@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col space-y-10">
-    <div
-      class="text-xl md:text-2xl flex flex-wrap justify-between items-center"
-    >
-      <div class="md:w-1/2 text-gray-800 dark:text-gray-200">
+    <div class="text-xl flex flex-wrap justify-between items-center">
+      <div class="text-gray-800 dark:text-gray-200 max-w-prose">
         <h1 class="leading-normal mb-5">
           Front end developer from Victoria, BC, currently living in Toronto,
           ON.
@@ -51,23 +49,17 @@
           >.
         </p>
       </div>
-      <div class="md:w-1/2 md:max-w-md">
-        <img
-          alt="black and white illustration of Carson Bain"
-          src="/profile-pic.jpg"
-        />
-      </div>
     </div>
     <div>
       <div class="flex items-center justify-between">
         <h2 class="text-xl md:text-2xl font-bold">Recent posts</h2>
         <NuxtLink
-          class="border-b border-solid border-gray-800 flex items-center space-x-1"
+          class="text-lg border-b border-solid border-gray-800 dark:border-gray-100 flex items-center space-x-1"
           to="/blog"
           ><span>See all</span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 text-gray-700"
+            class="h-4 w-4 text-gray-700 dark:text-gray-100"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -82,7 +74,7 @@
         <li
           v-for="article of articles"
           :key="article.slug"
-          class="pb-10 border-b border-gray-200"
+          class="pb-10 border-b border-gray-200 dark:border-gray-600"
         >
           <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
             <div class="max-w-prose">
@@ -97,7 +89,7 @@
                 {{ article.description }}
               </p>
               <div
-                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-500 dark:text-gray-300 flex items-center"
+                class="mt-4 uppercase tracking-wide text-sm font-semibold text-gray-500 dark:text-gray-100 flex items-center"
               >
                 Read more
                 <svg

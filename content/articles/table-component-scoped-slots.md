@@ -5,7 +5,7 @@ createdAt: 2021-03-19
 draft: true
 ---
 
-<div class="prose">
+<div class="prose dark:prose-light">
 
 # Building a Table Component with Vue and Scoped Slots
 
