@@ -2,17 +2,29 @@
   <div :class="{ dark: darkModeEnabled }" class="h-full">
     <div class="text-gray-900 h-full dark:text-gray-200">
       <div
-        class="w-full border-b border-solid border-gray-200 dark:border-gray-600"
+        class="
+          w-full
+          border-b border-solid border-gray-200
+          dark:border-gray-600
+        "
       >
         <nav
-          class="flex justify-between items-center max-w-screen-lg mx-auto px-8 py-6"
+          class="
+            flex
+            justify-between
+            items-center
+            max-w-screen-md
+            mx-auto
+            px-8
+            py-6
+          "
         >
           <NuxtLink class="uppercase font-bold tracking-wider text-2xl" to="/"
             >Carson Bain</NuxtLink
           >
           <div class="flex space-x-4">
             <NuxtLink
-              class="text-lg font-semibold text-gray-900 dark:text-gray-200 border-b-2 border-gray-900 dark:border-gray-50"
+              class="text-lg font-semibold text-gray-900 dark:text-gray-200"
               to="/blog"
               >Blog</NuxtLink
             >
@@ -52,7 +64,13 @@
         </nav>
       </div>
       <main
-        class="max-w-screen-lg mx-auto px-8 py-12 dark:bg-gray-900 dark:text-gray-200"
+        class="
+          max-w-screen-md
+          mx-auto
+          px-8
+          py-12
+          dark:bg-gray-900 dark:text-gray-200
+        "
       >
         <Nuxt />
       </main>

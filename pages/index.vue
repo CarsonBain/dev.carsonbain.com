@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col space-y-10">
+  <div class="flex flex-col space-y-16">
     <div class="text-lg md:text-xl flex flex-wrap justify-between items-center">
-      <div class="text-gray-800 dark:text-gray-200 max-w-prose">
+      <div class="text-gray-800 dark:text-gray-200">
         <h1 class="leading-normal mb-5">
           Front end developer from Victoria, BC, currently living in Toronto, ON
           📍.
@@ -14,17 +14,16 @@
             href="https://www.felixforyou.ca"
             >Felix</a
           >
-          building new user facing solutions for the growing telehealth market.
-          In my spare time, I love to take
+          building solutions for the growing telehealth market. In my spare
+          time, I love to take
           <a
             class="underline font-semibold"
             target="_blank"
             href="https://www.carsonbain.com"
-            >photographs</a
+            >photographs.</a
           >
-          and explore new technology.
         </p>
-        <p class="leading-normal mb-5">
+        <p class="leading-normal">
           Follow me on
           <a
             class="underline font-semibold"
@@ -54,7 +53,13 @@
       <div class="flex items-center justify-between">
         <h2 class="text-lg md:text-xl font-bold">Recent posts</h2>
         <NuxtLink
-          class="border-b border-solid border-gray-900 dark:border-gray-100 flex items-center space-x-1"
+          class="
+            border-b border-solid border-gray-900
+            dark:border-gray-100
+            flex
+            items-center
+            space-x-1
+          "
           to="/blog"
           ><span>See all</span
           ><svg
@@ -91,7 +96,15 @@
                 {{ article.description }}
               </p>
               <div
-                class="mt-4 text-sm dark:text-gray-100 inline-flex items-center border-b border-gray-900 dark:border-gray-100"
+                class="
+                  mt-4
+                  text-sm
+                  dark:text-gray-100
+                  inline-flex
+                  items-center
+                  border-b border-gray-900
+                  dark:border-gray-100
+                "
               >
                 Read more
                 <svg
